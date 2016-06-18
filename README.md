@@ -15,7 +15,8 @@ Here is the example of how to set up storage with a file in document directory.
 ```.swift
 let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
 let documentPath = (documentDirectory as NSString).stringByAppendingPathComponent("document.sqlite")
-let storage = ZManagedObjectStorage(fileURL: NSURL(fileURLWithPath: documentPath), modelName: "MyModel")
+let documentURL = NSURL(fileURLWithPath: documentPath)
+let storage = ZManagedObjectStorage(fileURL: documentURL, modelName: "MyModel")
 ```
 
 ### Reading objects from Core Data
