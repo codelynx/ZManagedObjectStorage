@@ -1,6 +1,6 @@
 # ZManagedObjectStorage
 
-ZManagedObjectStorage is a utility class for Core Data based programmers.  ZManagedObjectStorage creates and manage a single
+ZManagedObjectStorage is a utility class for Core Data programmers.  ZManagedObjectStorage creates and manage a single
 core data persistent storage from single model, and client code does not have to worry about constructing NSManagedObjectModel,
 NSPersistentStoreCoordinator and NSManagedObjectContext.
 
@@ -16,7 +16,7 @@ Here is the example of how to set up storage with a file in document directory.
 let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
 let documentPath = (documentDirectory as NSString).stringByAppendingPathComponent("document.sqlite")
 let documentURL = NSURL(fileURLWithPath: documentPath)
-let storage = ZManagedObjectStorage(fileURL: documentURL, modelName: "MyModel")
+let storage = ZManagedObjectStorage(fileURL: documentURL, modelName: "MyModel")!
 ```
 
 ### Reading objects from Core Data
@@ -30,7 +30,7 @@ do {
 	let entityDescription = NSEntityDescription.entityForName("YourEntity", inManagedObjectContext: managedObjectContext)
 	fetchRequest.entity = entityDescription
 	fetchRequest.sortDescriptors = [NSSortDescriptor(key: "some_key", ascending: true)]
-	let objects: = try managedObjectContext.executeFetchRequest(fetchRequest)
+	let objects = try managedObjectContext.executeFetchRequest(fetchRequest)
 	// ...
 }
 catch let error {
