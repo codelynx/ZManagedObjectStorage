@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		CCD162DD1D15288E00866BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD162DC1D15288E00866BC3 /* AppDelegate.swift */; };
-		CCD162DF1D15288E00866BC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD162DE1D15288E00866BC3 /* ViewController.swift */; };
 		CCD162E21D15288E00866BC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD162E01D15288E00866BC3 /* Main.storyboard */; };
 		CCD162E41D15288E00866BC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD162E31D15288E00866BC3 /* Assets.xcassets */; };
 		CCD162E71D15288E00866BC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD162E51D15288E00866BC3 /* LaunchScreen.storyboard */; };
+		CCD162F01D1528DC00866BC3 /* MyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCD162EE1D1528DC00866BC3 /* MyModel.xcdatamodeld */; };
+		CCD162FF1D152B3300866BC3 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD162FD1D152B3300866BC3 /* Item+CoreDataProperties.swift */; };
+		CCD163001D152B3300866BC3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD162FE1D152B3300866BC3 /* Item.swift */; };
+		CCD163021D152BD200866BC3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD163011D152BD200866BC3 /* TableViewController.swift */; };
+		CCD163061D15323500866BC3 /* ZManagedObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD163051D15323500866BC3 /* ZManagedObjectStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC98C9E91D159A550034DBB0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CC98C9EA1D159A550034DBB0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CCD162D91D15288E00866BC3 /* ZManagedObjectStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZManagedObjectStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD162DC1D15288E00866BC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CCD162DE1D15288E00866BC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CCD162E11D15288E00866BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCD162E31D15288E00866BC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCD162E61D15288E00866BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCD162E81D15288E00866BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCD162EF1D1528DC00866BC3 /* MyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyModel.xcdatamodel; sourceTree = "<group>"; };
+		CCD162FD1D152B3300866BC3 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CCD162FE1D152B3300866BC3 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CCD163011D152BD200866BC3 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CCD163051D15323500866BC3 /* ZManagedObjectStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZManagedObjectStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +64,18 @@
 		CCD162DB1D15288E00866BC3 /* ZManagedObjectStorage */ = {
 			isa = PBXGroup;
 			children = (
+				CC98C9E91D159A550034DBB0 /* LICENSE */,
+				CC98C9EA1D159A550034DBB0 /* README.md */,
 				CCD162DC1D15288E00866BC3 /* AppDelegate.swift */,
-				CCD162DE1D15288E00866BC3 /* ViewController.swift */,
-				CCD162E01D15288E00866BC3 /* Main.storyboard */,
 				CCD162E31D15288E00866BC3 /* Assets.xcassets */,
-				CCD162E51D15288E00866BC3 /* LaunchScreen.storyboard */,
 				CCD162E81D15288E00866BC3 /* Info.plist */,
+				CCD162FE1D152B3300866BC3 /* Item.swift */,
+				CCD162FD1D152B3300866BC3 /* Item+CoreDataProperties.swift */,
+				CCD162E51D15288E00866BC3 /* LaunchScreen.storyboard */,
+				CCD162E01D15288E00866BC3 /* Main.storyboard */,
+				CCD162EE1D1528DC00866BC3 /* MyModel.xcdatamodeld */,
+				CCD163011D152BD200866BC3 /* TableViewController.swift */,
+				CCD163051D15323500866BC3 /* ZManagedObjectStorage.swift */,
 			);
 			path = ZManagedObjectStorage;
 			sourceTree = "<group>";
@@ -135,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCD162DF1D15288E00866BC3 /* ViewController.swift in Sources */,
+				CCD163021D152BD200866BC3 /* TableViewController.swift in Sources */,
+				CCD163061D15323500866BC3 /* ZManagedObjectStorage.swift in Sources */,
+				CCD163001D152B3300866BC3 /* Item.swift in Sources */,
 				CCD162DD1D15288E00866BC3 /* AppDelegate.swift in Sources */,
+				CCD162FF1D152B3300866BC3 /* Item+CoreDataProperties.swift in Sources */,
+				CCD162F01D1528DC00866BC3 /* MyModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +308,22 @@
 				CCD162ED1D15288E00866BC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CCD162EE1D1528DC00866BC3 /* MyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CCD162EF1D1528DC00866BC3 /* MyModel.xcdatamodel */,
+			);
+			currentVersion = CCD162EF1D1528DC00866BC3 /* MyModel.xcdatamodel */;
+			path = MyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CCD162D11D15288E00866BC3 /* Project object */;
 }
