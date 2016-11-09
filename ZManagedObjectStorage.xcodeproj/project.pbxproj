@@ -7,35 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CCD162DD1D15288E00866BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD162DC1D15288E00866BC3 /* AppDelegate.swift */; };
-		CCD162E21D15288E00866BC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD162E01D15288E00866BC3 /* Main.storyboard */; };
-		CCD162E41D15288E00866BC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD162E31D15288E00866BC3 /* Assets.xcassets */; };
-		CCD162E71D15288E00866BC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD162E51D15288E00866BC3 /* LaunchScreen.storyboard */; };
-		CCD162F01D1528DC00866BC3 /* MyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCD162EE1D1528DC00866BC3 /* MyModel.xcdatamodeld */; };
-		CCD162FF1D152B3300866BC3 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD162FD1D152B3300866BC3 /* Item+CoreDataProperties.swift */; };
-		CCD163001D152B3300866BC3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD162FE1D152B3300866BC3 /* Item.swift */; };
-		CCD163021D152BD200866BC3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD163011D152BD200866BC3 /* TableViewController.swift */; };
-		CCD163061D15323500866BC3 /* ZManagedObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD163051D15323500866BC3 /* ZManagedObjectStorage.swift */; };
+		CC1233891DD2C26200B9BADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1233881DD2C26200B9BADC /* AppDelegate.swift */; };
+		CC12338B1DD2C26200B9BADC /* RandomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC12338A1DD2C26200B9BADC /* RandomsViewController.swift */; };
+		CC12338E1DD2C26200B9BADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC12338C1DD2C26200B9BADC /* Main.storyboard */; };
+		CC1233901DD2C26200B9BADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC12338F1DD2C26200B9BADC /* Assets.xcassets */; };
+		CC1233931DD2C26200B9BADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1233911DD2C26200B9BADC /* LaunchScreen.storyboard */; };
+		CC12339A1DD2C2CA00B9BADC /* ZManagedObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1233991DD2C2CA00B9BADC /* ZManagedObjectStorage.swift */; };
+		CC12339D1DD2C30200B9BADC /* Randoms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC12339B1DD2C30200B9BADC /* Randoms.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC98C9ED1D15B3110034DBB0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		CC98C9EE1D15B3110034DBB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		CCD162D91D15288E00866BC3 /* ZManagedObjectStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZManagedObjectStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCD162DC1D15288E00866BC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CCD162E11D15288E00866BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CCD162E31D15288E00866BC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CCD162E61D15288E00866BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CCD162E81D15288E00866BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCD162EF1D1528DC00866BC3 /* MyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyModel.xcdatamodel; sourceTree = "<group>"; };
-		CCD162FD1D152B3300866BC3 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CCD162FE1D152B3300866BC3 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		CCD163011D152BD200866BC3 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		CCD163051D15323500866BC3 /* ZManagedObjectStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZManagedObjectStorage.swift; sourceTree = "<group>"; };
+		CC1233851DD2C26200B9BADC /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1233881DD2C26200B9BADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC12338A1DD2C26200B9BADC /* RandomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomsViewController.swift; sourceTree = "<group>"; };
+		CC12338D1DD2C26200B9BADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC12338F1DD2C26200B9BADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC1233921DD2C26200B9BADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC1233941DD2C26200B9BADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC1233991DD2C2CA00B9BADC /* ZManagedObjectStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZManagedObjectStorage.swift; sourceTree = "<group>"; };
+		CC12339C1DD2C30200B9BADC /* Randoms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Randoms.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CCD162D61D15288E00866BC3 /* Frameworks */ = {
+		CC1233821DD2C26200B9BADC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,77 +39,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CCD162D01D15288E00866BC3 = {
+		CC12337A1DD2C24B00B9BADC = {
 			isa = PBXGroup;
 			children = (
-				CCD162DB1D15288E00866BC3 /* ZManagedObjectStorage */,
-				CCD162DA1D15288E00866BC3 /* Products */,
+				CC1233981DD2C2CA00B9BADC /* ZKit */,
+				CC1233871DD2C26200B9BADC /* TestApp */,
+				CC1233861DD2C26200B9BADC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CCD162DA1D15288E00866BC3 /* Products */ = {
+		CC1233861DD2C26200B9BADC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCD162D91D15288E00866BC3 /* ZManagedObjectStorage.app */,
+				CC1233851DD2C26200B9BADC /* TestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CCD162DB1D15288E00866BC3 /* ZManagedObjectStorage */ = {
+		CC1233871DD2C26200B9BADC /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
-				CCD162DC1D15288E00866BC3 /* AppDelegate.swift */,
-				CCD162E31D15288E00866BC3 /* Assets.xcassets */,
-				CCD162E81D15288E00866BC3 /* Info.plist */,
-				CCD162FE1D152B3300866BC3 /* Item.swift */,
-				CCD162FD1D152B3300866BC3 /* Item+CoreDataProperties.swift */,
-				CCD162E51D15288E00866BC3 /* LaunchScreen.storyboard */,
-				CC98C9ED1D15B3110034DBB0 /* LICENSE */,
-				CCD162E01D15288E00866BC3 /* Main.storyboard */,
-				CCD162EE1D1528DC00866BC3 /* MyModel.xcdatamodeld */,
-				CC98C9EE1D15B3110034DBB0 /* README.md */,
-				CCD163011D152BD200866BC3 /* TableViewController.swift */,
-				CCD163051D15323500866BC3 /* ZManagedObjectStorage.swift */,
+				CC1233881DD2C26200B9BADC /* AppDelegate.swift */,
+				CC12338F1DD2C26200B9BADC /* Assets.xcassets */,
+				CC12339B1DD2C30200B9BADC /* Randoms.xcdatamodeld */,
+				CC1233941DD2C26200B9BADC /* Info.plist */,
+				CC1233911DD2C26200B9BADC /* LaunchScreen.storyboard */,
+				CC12338C1DD2C26200B9BADC /* Main.storyboard */,
+				CC12338A1DD2C26200B9BADC /* RandomsViewController.swift */,
 			);
-			path = ZManagedObjectStorage;
+			path = TestApp;
+			sourceTree = "<group>";
+		};
+		CC1233981DD2C2CA00B9BADC /* ZKit */ = {
+			isa = PBXGroup;
+			children = (
+				CC1233991DD2C2CA00B9BADC /* ZManagedObjectStorage.swift */,
+			);
+			name = ZKit;
+			path = TestApp/ZKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CCD162D81D15288E00866BC3 /* ZManagedObjectStorage */ = {
+		CC1233841DD2C26200B9BADC /* TestApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCD162EB1D15288E00866BC3 /* Build configuration list for PBXNativeTarget "ZManagedObjectStorage" */;
+			buildConfigurationList = CC1233951DD2C26200B9BADC /* Build configuration list for PBXNativeTarget "TestApp" */;
 			buildPhases = (
-				CCD162D51D15288E00866BC3 /* Sources */,
-				CCD162D61D15288E00866BC3 /* Frameworks */,
-				CCD162D71D15288E00866BC3 /* Resources */,
+				CC1233811DD2C26200B9BADC /* Sources */,
+				CC1233821DD2C26200B9BADC /* Frameworks */,
+				CC1233831DD2C26200B9BADC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ZManagedObjectStorage;
-			productName = ZManagedObjectStorage;
-			productReference = CCD162D91D15288E00866BC3 /* ZManagedObjectStorage.app */;
+			name = TestApp;
+			productName = TestApp;
+			productReference = CC1233851DD2C26200B9BADC /* TestApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CCD162D11D15288E00866BC3 /* Project object */ = {
+		CC12337B1DD2C24B00B9BADC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "Electricwoods LLC";
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
 				TargetAttributes = {
-					CCD162D81D15288E00866BC3 = {
-						CreatedOnToolsVersion = 7.3;
+					CC1233841DD2C26200B9BADC = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2P97EM4L4N;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = CCD162D41D15288E00866BC3 /* Build configuration list for PBXProject "ZManagedObjectStorage" */;
+			buildConfigurationList = CC12337E1DD2C24B00B9BADC /* Build configuration list for PBXProject "ZManagedObjectStorage" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -123,58 +123,56 @@
 				en,
 				Base,
 			);
-			mainGroup = CCD162D01D15288E00866BC3;
-			productRefGroup = CCD162DA1D15288E00866BC3 /* Products */;
+			mainGroup = CC12337A1DD2C24B00B9BADC;
+			productRefGroup = CC1233861DD2C26200B9BADC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CCD162D81D15288E00866BC3 /* ZManagedObjectStorage */,
+				CC1233841DD2C26200B9BADC /* TestApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CCD162D71D15288E00866BC3 /* Resources */ = {
+		CC1233831DD2C26200B9BADC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCD162E71D15288E00866BC3 /* LaunchScreen.storyboard in Resources */,
-				CCD162E41D15288E00866BC3 /* Assets.xcassets in Resources */,
-				CCD162E21D15288E00866BC3 /* Main.storyboard in Resources */,
+				CC1233931DD2C26200B9BADC /* LaunchScreen.storyboard in Resources */,
+				CC1233901DD2C26200B9BADC /* Assets.xcassets in Resources */,
+				CC12338E1DD2C26200B9BADC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CCD162D51D15288E00866BC3 /* Sources */ = {
+		CC1233811DD2C26200B9BADC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCD163021D152BD200866BC3 /* TableViewController.swift in Sources */,
-				CCD163061D15323500866BC3 /* ZManagedObjectStorage.swift in Sources */,
-				CCD163001D152B3300866BC3 /* Item.swift in Sources */,
-				CCD162DD1D15288E00866BC3 /* AppDelegate.swift in Sources */,
-				CCD162FF1D152B3300866BC3 /* Item+CoreDataProperties.swift in Sources */,
-				CCD162F01D1528DC00866BC3 /* MyModel.xcdatamodeld in Sources */,
+				CC12339D1DD2C30200B9BADC /* Randoms.xcdatamodeld in Sources */,
+				CC12338B1DD2C26200B9BADC /* RandomsViewController.swift in Sources */,
+				CC12339A1DD2C2CA00B9BADC /* ZManagedObjectStorage.swift in Sources */,
+				CC1233891DD2C26200B9BADC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CCD162E01D15288E00866BC3 /* Main.storyboard */ = {
+		CC12338C1DD2C26200B9BADC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CCD162E11D15288E00866BC3 /* Base */,
+				CC12338D1DD2C26200B9BADC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CCD162E51D15288E00866BC3 /* LaunchScreen.storyboard */ = {
+		CC1233911DD2C26200B9BADC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CCD162E61D15288E00866BC3 /* Base */,
+				CC1233921DD2C26200B9BADC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -182,10 +180,23 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CCD162E91D15288E00866BC3 /* Debug */ = {
+		CC12337F1DD2C24B00B9BADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CC1233801DD2C24B00B9BADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CC1233961DD2C26200B9BADC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -194,15 +205,19 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2P97EM4L4N;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -219,19 +234,26 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				INFOPLIST_FILE = TestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.electricwoods.TestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CCD162EA1D15288E00866BC3 /* Release */ = {
+		CC1233971DD2C26200B9BADC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -240,15 +262,19 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2P97EM4L4N;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -259,53 +285,37 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				INFOPLIST_FILE = TestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.electricwoods.TestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		CCD162EC1D15288E00866BC3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ZManagedObjectStorage/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.electricwoods.ZManagedObjectStorage;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		CCD162ED1D15288E00866BC3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ZManagedObjectStorage/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.electricwoods.ZManagedObjectStorage;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CCD162D41D15288E00866BC3 /* Build configuration list for PBXProject "ZManagedObjectStorage" */ = {
+		CC12337E1DD2C24B00B9BADC /* Build configuration list for PBXProject "ZManagedObjectStorage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CCD162E91D15288E00866BC3 /* Debug */,
-				CCD162EA1D15288E00866BC3 /* Release */,
+				CC12337F1DD2C24B00B9BADC /* Debug */,
+				CC1233801DD2C24B00B9BADC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCD162EB1D15288E00866BC3 /* Build configuration list for PBXNativeTarget "ZManagedObjectStorage" */ = {
+		CC1233951DD2C26200B9BADC /* Build configuration list for PBXNativeTarget "TestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CCD162EC1D15288E00866BC3 /* Debug */,
-				CCD162ED1D15288E00866BC3 /* Release */,
+				CC1233961DD2C26200B9BADC /* Debug */,
+				CC1233971DD2C26200B9BADC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -313,17 +323,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CCD162EE1D1528DC00866BC3 /* MyModel.xcdatamodeld */ = {
+		CC12339B1DD2C30200B9BADC /* Randoms.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CCD162EF1D1528DC00866BC3 /* MyModel.xcdatamodel */,
+				CC12339C1DD2C30200B9BADC /* Randoms.xcdatamodel */,
 			);
-			currentVersion = CCD162EF1D1528DC00866BC3 /* MyModel.xcdatamodel */;
-			path = MyModel.xcdatamodeld;
+			currentVersion = CC12339C1DD2C30200B9BADC /* Randoms.xcdatamodel */;
+			path = Randoms.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = CCD162D11D15288E00866BC3 /* Project object */;
+	rootObject = CC12337B1DD2C24B00B9BADC /* Project object */;
 }

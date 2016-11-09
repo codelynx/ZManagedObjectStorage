@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ZManagedObjectStorage.xcscheme</key>
+		<key>TestApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CCD162D81D15288E00866BC3</key>
+		<key>CC1233841DD2C26200B9BADC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

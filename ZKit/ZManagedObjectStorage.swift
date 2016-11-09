@@ -29,12 +29,12 @@ import Foundation
 import CoreData
 
 
-class ZManagedObjectStorage {
+public class ZManagedObjectStorage {
 
-	var fileURL: NSURL
-	var modelName: String
+	public private(set) var fileURL: URL
+	public private(set) var modelName: String
 
-	init?(fileURL: NSURL, modelName: String) {
+	public init?(fileURL: URL, modelName: String) {
 		self.fileURL = fileURL
 		self.modelName = modelName
 		if self.managedObjectContext == nil {
@@ -42,17 +42,17 @@ class ZManagedObjectStorage {
 		}
 	}
 	
-	lazy var managedObjectModel: NSManagedObjectModel? = {
+	public lazy var managedObjectModel: NSManagedObjectModel? = {
 		var managedObjectModel: NSManagedObjectModel? = nil
-		let modelURL = NSBundle.mainBundle().URLForResource(self.modelName, withExtension: "momd")
+		let modelURL = Bundle.main.url(forResource: self.modelName, withExtension: "momd")
 		if  modelURL != nil {
-			managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL!)
+			managedObjectModel = NSManagedObjectModel(contentsOf: modelURL!)
 		}
-		if managedObjectModel == nil { NSLog("model not found: name=%@", self.modelName) }
+		if managedObjectModel == nil { print("ZManagedObjectStorage: model not found: name=\(self.modelName)") }
 		return managedObjectModel
 	}()
 
-	lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
+	public lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
 		var coordinator: NSPersistentStoreCoordinator? = nil
 		var error: NSError? = nil
 
@@ -62,37 +62,34 @@ class ZManagedObjectStorage {
 			do {
 				coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel!)
 				let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true];
-				let store = try coordinator?.addPersistentStoreWithType(NSSQLiteStoreType,
-							configuration:nil, URL:self.fileURL, options:options)
+				let store = try coordinator?.addPersistentStore(ofType: NSSQLiteStoreType,
+							configurationName:nil, at:self.fileURL, options:options)
 				if store == nil {
-					NSLog("Failed migrating Core Data Model. Old file will be deleted.")
-					NSLog("file: %@", self.fileURL.path!)
-
 					#if DEBUG
-					NSFileManager.defaultManager().removeItemAtPath(self.file, error: &error)
-					ZReportError(error)
-					// recreate store file once again
-					store = coordinator.addPersistentStoreWithType(NSSQLiteStoreType,
-								configuration:nil, URL:self.storeURL, options:options, error:&error)
-					ZReportError(error)
-					if store == nil { return nil }
+					do {
+						print("ZManagedObjectStorage: Failed migrating Core Data Model. Old storage will be deleted in debug build.")
+						print("  file: \(self.fileURL.path)")
+						try FileManager.default.removeItem(at: self.fileURL)
+						// recreate store file once again
+						try coordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: self.fileURL, options: options)
+					}
+					catch { print(error) }
 					#endif
 				}
 			}
-			catch let error {
-			}
+			catch { print("ZManagedObjectStorage: \(error)\r  file: \(self.fileURL.path)") }
 		}
 		if coordinator == nil {
-			NSLog("failed to configure persistent store coodinator: %@", self.fileURL.path!)
+			print("ZManagedObjectStorage: Failed to configure persistent store coodinator:\r  file: \(self.fileURL.path)")
 		}
 		return coordinator
 	}()
 
-	lazy var managedObjectContext: NSManagedObjectContext? = {
+	public lazy var managedObjectContext: NSManagedObjectContext? = {
 		var context: NSManagedObjectContext? = nil
 		let coordinator = self.persistentStoreCoordinator
 		if coordinator != nil {
-			context = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+			context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
 			context?.persistentStoreCoordinator = self.persistentStoreCoordinator
 		}
 		return context
