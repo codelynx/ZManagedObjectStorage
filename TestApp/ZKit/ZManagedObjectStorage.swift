@@ -33,71 +33,57 @@ public class ZManagedObjectStorage {
 
 	public private(set) var fileURL: URL
 	public private(set) var modelName: String
+	public let managedObjectModel: NSManagedObjectModel
+	public let persistentStoreCoordinator: NSPersistentStoreCoordinator
+	public let persistentStore: NSPersistentStore
+	public let managedObjectContext: NSManagedObjectContext
 
 	public init?(fileURL: URL, modelName: String) {
 		self.fileURL = fileURL
 		self.modelName = modelName
-		if self.managedObjectContext == nil {
-			return nil
+
+		// object model
+		guard let modelURL = Bundle.main.url(forResource: modelName, withExtension: "momd") else { return nil }
+		guard let model = NSManagedObjectModel(contentsOf: modelURL) else { return nil }
+		self.managedObjectModel = model
+
+		// persistent store coordinator
+		let coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
+		self.persistentStoreCoordinator = coordinator
+
+		let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true];
+		do {
+			self.persistentStore = try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: fileURL, options:options)
 		}
-	}
-	
-	private lazy var managedObjectModel: NSManagedObjectModel? = {
-		var managedObjectModel: NSManagedObjectModel? = nil
-		let modelURL = Bundle.main.url(forResource: self.modelName, withExtension: "momd")
-		if  modelURL != nil {
-			managedObjectModel = NSManagedObjectModel(contentsOf: modelURL!)
-		}
-		if managedObjectModel == nil { print("ZManagedObjectStorage: model not found: name=\(self.modelName)") }
-		return managedObjectModel
-	}()
-
-	private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
-		var coordinator: NSPersistentStoreCoordinator? = nil
-		var error: NSError? = nil
-
-		var managedObjectModel = self.managedObjectModel
-		if (managedObjectModel != nil) {
-
+		catch {
+			print("ZManagedObjectStorage: \(error)\r  file: \(fileURL.path)")
+			#if DEBUG
 			do {
-				coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel!)
-				let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true];
-				let store = try coordinator?.addPersistentStore(ofType: NSSQLiteStoreType,
-							configurationName:nil, at:self.fileURL, options:options)
-				if store == nil {
-					#if DEBUG
-					do {
-						print("ZManagedObjectStorage: Failed migrating Core Data Model. Old storage will be deleted in debug build.")
-						print("  file: \(self.fileURL.path)")
-						try FileManager.default.removeItem(at: self.fileURL)
-						// recreate store file once again
-						try coordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: self.fileURL, options: options)
-					}
-					catch { print(error) }
-					#endif
-				}
+				print("ZManagedObjectStorage: Failed migrating Core Data Model. Old storage will be deleted in debug build.")
+				print("  file: \(fileURL.path)")
+				try FileManager.default.removeItem(at: fileURL)
+				// recreate store file once again
+				self.persistentStore = try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: fileURL, options: options)
 			}
-			catch { print("ZManagedObjectStorage: \(error)\r  file: \(self.fileURL.path)") }
+			catch { print(error) ; return nil }
+			#endif
 		}
-		if coordinator == nil {
-			print("ZManagedObjectStorage: Failed to configure persistent store coodinator:\r  file: \(self.fileURL.path)")
+
+		// managed object context
+		let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+		context.persistentStoreCoordinator = coordinator
+		self.managedObjectContext = context
+	}
+
+	func insert<T: NSManagedObject>(entityName: String) -> T? {
+		let context = self.managedObjectContext
+		if let entity = NSEntityDescription.entity(forEntityName: entityName, in: context) {
+			return NSManagedObject(entity: entity, insertInto: context) as? T
 		}
-		return coordinator
-	}()
+		return nil
+	}
 
-	public lazy var managedObjectContext: NSManagedObjectContext? = {
-		var context: NSManagedObjectContext? = nil
-		let coordinator = self.persistentStoreCoordinator
-		if coordinator != nil {
-			context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-			context?.persistentStoreCoordinator = self.persistentStoreCoordinator
-		}
-		return context
-	}()
-
-
-	public func save() throws {
-		try self.managedObjectContext?.save()
+	func save() throws {
+		try self.managedObjectContext.save()
 	}
 }
-

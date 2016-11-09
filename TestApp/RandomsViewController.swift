@@ -24,7 +24,7 @@ class RandomsViewController: UIViewController, UITableViewDataSource {
 	func fetchObjects() -> [RandomObject] {
 		let request = NSFetchRequest<RandomObject>(entityName: "RandomObject")
 		request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
-		return try! self.storage.managedObjectContext?.fetch(request) ?? []
+		return try! self.storage.managedObjectContext.fetch(request)
 	}
 
 	var documentFileURL: URL {
@@ -47,8 +47,8 @@ class RandomsViewController: UIViewController, UITableViewDataSource {
 	// MARK: -
 	
 	@IBAction func addAction(_ sender: AnyObject) {
-		if let context = self.storage.managedObjectContext,
-		   let entity = NSEntityDescription.entity(forEntityName: "RandomObject", in: context),
+		let context = self.storage.managedObjectContext
+		if let entity = NSEntityDescription.entity(forEntityName: "RandomObject", in: context),
 		   let object = NSManagedObject(entity: entity, insertInto: context) as? RandomObject {
 			object.date = Date() as NSDate?
 			object.value = Int32(bitPattern: arc4random())
@@ -59,14 +59,13 @@ class RandomsViewController: UIViewController, UITableViewDataSource {
 	}
 
 	@IBAction func wasteAction(_ sender: AnyObject) {
-		if let context = self.storage.managedObjectContext {
-			for object in self.objects {
-				context.delete(object)
-			}
-			try? context.save()
-			self.objects = fetchObjects()
-			self.tableView.reloadData()
+		let context = self.storage.managedObjectContext
+		for object in self.objects {
+			context.delete(object)
 		}
+		try? context.save()
+		self.objects = fetchObjects()
+		self.tableView.reloadData()
 	}
 
 	// MARK: -
